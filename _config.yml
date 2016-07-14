@@ -1,24 +1,24 @@
 # Site settings
-title:       Pixyll
+title:       Totomz
 email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+author:      Tommaso Doninelli
+description: "Software development, devops, IT, infrastructure"
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "https://totomz.github.io/"
 date_format: "%b %-d, %Y"
 
 # Google services
 google_verification:
 # Use either direct GA implementation or set up GTM account
 # - using both will skew your data (leave blank to not use at all)
-google_analytics:
+google_analytics: UA-80722776-1
 google_tag_manager:
 # Bing services
 bing_verification:
 
 # Optional features
 animated:             false
-show_related_posts:   false
+show_related_posts:   true
 show_post_footers:    false
 show_social_icons:    false
 ajaxify_contact_form: false
@@ -36,14 +36,14 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
+github_username:totomz
 bitbucket_username:
-stackoverflow_id:
+stackoverflow_id:277197
 twitter_username:
 skype_username:
 steam_nickname:
 google_plus_id:
-linkedin_username:
+linkedin_username:tdoninelli
 angellist_username:
 medium_id:
 bitcoin_url:
@@ -53,10 +53,10 @@ flattr_button:
 # Post sharing icons
 show_sharing_icons: false
 # Change to 'true' to enable individual icons
-share_facebook: false
-share_twitter: false
+share_facebook: true
+share_twitter: true
 share_googleplus: false
-share_linkedin: false
+share_linkedin: true
 share_digg: false
 share_tumblr: false
 share_reddit: false
