@@ -40,7 +40,7 @@ java.lang.NoSuchMethodError: javax.servlet.http.HttpServletResponse.getStatus()I
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
 	at java.lang.Thread.run(Thread.java:745)
 ```
-Mh.....the first line of the stacktrace is  `handleErrorPage(request, writer, response.getStatus(), reason);` ; response is an `HttpServletResponse`, and the method `getStatus() ` is there **since Servlet 3.0**. Turbine is quite ~~old~~ stable, maybe is "not compatible" with Servlet 3.0? Lets check its dependencies (of the jar version):
+Mh.....the first line of the stacktrace is  `handleErrorPage(request, writer, response.getStatus(), reason);` ; response is an `HttpServletResponse`, and the method `getStatus() ` is there **since Servlet 3.0**. Turbine is a stable component, maybe is "not compatible" with Servlet 3.0? Lets check its dependencies (of the jar version):
 ![dsa](/images/turbine/turbine-dependency.png))
 
 Here it is! A dependency conflict with my embedded jetty (I'm building a fat-jar....). So, just remove `servlet-api:2.5` and we are fine
