@@ -4,12 +4,12 @@ title: About ME
 permalink: /about/
 tags: about
 ---
-
 Hi, my name is Tommaso.
+
 
 I am a "technology enthusiast" (a linkedin-like word for *nerd-in-the-bones*). I am a father of a wonderful boy, and a sailor since more than 15 years.
 
-![Vulky nel suo splendore](/assets/vulky.jpg)
+![Vulky nel suo splendore](/images/vulky.jpg)
 
 I started working during my studies (as *traffic engineer*) in an spin-off of university "la Sapienza" that is grow up to a multinational company, market-leader in Realtime Traffic Management and Forecasting software - I am one of the great guys behind [PTV Optima](http://vision-traffic.ptvgroup.com/en-us/products/ptv-optima/).
 

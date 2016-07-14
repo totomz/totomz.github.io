@@ -1,6 +1,6 @@
 # Site settings
 title:       Totomz
-email:       your_email@example.com
+email:       tommaso.doninelli+website@gmail.com
 author:      Tommaso Doninelli
 description: "Software development, devops, IT, infrastructure"
 baseurl:     ""
@@ -17,10 +17,10 @@ google_tag_manager:
 bing_verification:
 
 # Optional features
-animated:             false
+animated:             true
 show_related_posts:   true
-show_post_footers:    true
-show_social_icons:    false
+show_post_footers:    false
+show_social_icons:    true
 ajaxify_contact_form: false
 enable_mathjax: false
 extended_fonts: false
@@ -51,7 +51,7 @@ paypal_url:
 flattr_button:
 
 # Post sharing icons
-show_sharing_icons: false
+show_sharing_icons: true
 # Change to 'true' to enable individual icons
 share_facebook: true
 share_twitter: true
