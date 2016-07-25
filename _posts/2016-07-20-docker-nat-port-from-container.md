@@ -56,3 +56,44 @@ try(Socket echoSocket = new Socket(System.getenv("pippo"), 5555)) {
 {% endhighlight %}
 
 Done!
+
+# Run on OSX
+*EDIT:* This post has been edited to include the comments from [degree](https://github.com/docker/docker/issues/3778#issuecomment-233987356)
+
+To run the workaround on a mac
+
+{% highlight bash %}
+```
+$ brew tap brona/iproute2mac
+$ brew install iproute2mac
+$ ncat -k -l -p 5555 -c 'read i && echo $(docker port $i | paste -sd, -)' &
+$ docker run --rm -it -e "pippo=$(ip route get 8.8.8.8 | awk 'NR==1 { print $NF }')" -p 8123 -p 8512 ubuntu /bin/bash
+```
+{% endhighlight %}
+
+In the container
+
+{% highlight bash %}
+$ apt-get update; apt-get install -y netcat
+$ echo $HOSTNAME | nc $pippo 5555
+8123/tcp -> 0.0.0.0:32774,8512/tcp -> 0.0.0.0:32773
+$ echo $HOSTNAME 8123 | nc $pippo 5555
+0.0.0.0:32774
+$ echo $HOSTNAME 8512 | nc $pippo 5555
+0.0.0.0:32773
+{% endhighlight %}
+
+Result (respectively per request):
+
+```
+8123/tcp -> 0.0.0.0:32774,8512/tcp -> 0.0.0.0:32773
+0.0.0.0:32774
+0.0.0.0:32773
+```
+
+Note:
+
+1. 8123 and 8512 are just for example
+2. paste command is reformatted
+3. in container $HOSTNAME is used instead of version with parenthesis
+4. if you specify also port then you get spesific result
