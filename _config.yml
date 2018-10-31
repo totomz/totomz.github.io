@@ -18,36 +18,34 @@ sass:
   style: compressed # expanded
 
 # SEO settings
-title: end2end
-description: "A free Jekyll theme for download"
-keywords: "Jekyll, theme, free, download, SEO, blog, web"
-url: http://nandomoreira.me
-baseurl: "/end2end"
+title: totomz
+description: "Tommaso Doninelli personal notebook"
+keywords: "AWS, Cloud Solution Architect, devops, cloud, aws"
+url: https://totomz.github.io
+baseurl: ""
 
-google_analytics: UA-52446115-1
-repo: http://github.com/nandomoreirame/end2end
-disqus_shortname: "nandothemes"
-disqus_site_shortname: "nandothemes"
+google_analytics: UA-80722776-3
+repo: http://github.com/totomz/totomz.github.io
+disqus_shortname: "totomzgithubio"
+disqus_site_shortname: "totomzgithubio"
 
 # Author settings
 author:
-  name: Fernando Moreira
-  job: Frontend Engineer
-  bio: "Enthusiast performance, responsive design and usability, always looking for the best project and good coffee."
-  thumb: /images/author.jpg
-  email: nandomoreira.me@gmail.com
-  url: https://nandomoreira.me/
-  github: https://github.com/nandomoreirame
-  twitter: https://twitter.com/umdevux
-  facebook: https://facebook.com/umdevux
-  linkedin: https://linkedin.com/in/nandomoreirame
+  name: Tommaso Doninelli
+  job: CTO and Cloud Solution Architect
+  bio: "Always looking for the best project"
+  thumb: https://www.gravatar.com/avatar/9f61771330a110b3d67767af7c8b08cd?s=100
+  email: tommaso.doninelli@gmail.com
+  url: https://totomz.github.io/
+  github: https://github.com/totomz
+  twitter: https://twitter.com/glicerina_
+  facebook: https://www.facebook.com/zuccherocaramellato84
+  linkedin: https://www.linkedin.com/in/tdoninelli/
 
 # navbar pages
 navbar:
   - slug: about
     title: About
-  - slug: icons
-    title: Icons
   - slug: blog
     title: Blog
 
