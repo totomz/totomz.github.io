@@ -7,6 +7,7 @@ description: Daje Daje
 comments: true
 keywords: "this,is,sparta"
 category: dev
+#image: https://jekyllrb.com/img/octojekyll.png
 tags:
   - java
   - dev
