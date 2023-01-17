@@ -1,0 +1,19 @@
+setcolor
+
+serve() {
+  hugo serve
+}
+
+
+build() {
+  rm -rf public
+  hugo
+}
+
+test() {
+  build
+  docker run --rm -it \
+    -v "$(pwd)/public":/src \
+    klakegg/html-proofer:3.19.2 \
+    --allow-hash-href --check-html --empty-alt-ignore
+}

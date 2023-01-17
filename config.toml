@@ -1,0 +1,52 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = "Totomz's Blog"
+theme = "cactus"
+
+################
+# Cactus Theme # 
+################
+# Main menu which appears below site header.
+copyright="Tommaso Doninelli - Theme https://github.com/monkeyWzr/hugo-theme-cactus"
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
+
+# Home page
+[params]
+description = """
+Welcome to my personal site! I post mainly about tech topics I work on . 
+
+Founder of Hakuna Cloud, working to help companies to adopt the cloud computing by optimizing their infrastructure and cutting cloud services monthly bill.
+15+ experience in IT as Lead Developer, CTO and Cloud Solution Architects
+"""
+mainSectionTitle = "Blog"
+showAllPostsOnHomePage = true
+
+
+[[params.social]]
+  name = "github"
+  link = "https://github.com/totomz"
+
+[[params.social]]
+  name = "linkedin"
+  link = "https://www.linkedin.com/in/tdoninelli/"
+
+  [params.comments]
+    enabled = false
