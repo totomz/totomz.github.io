@@ -26,7 +26,7 @@ This post shows a simple way to generate all terraform/OpenTofu resources to eas
 # AWS Resources
 First of all, these resources work only with [OpenTofu](https://opentofu.org/), the community-supported Terraform fork, because
 of the APEX DNS record. If a canonical website DNS record could be a third-level domain like `www.croccocode.com`,
-an APEX domain or naked domain is a second level name like `corccocode.com`.
+an APEX domain or naked domain is a second level name like `croccocode.com`.
 
 Not all websites require an apex domain, usually only landing pages and websites. Here we generate the DNS records dinamycally
 and the apex domain are generated only if a variable is set - and this conditionality is expressed with the `enabled` meta-argument -> https://opentofu.org/docs/language/meta-arguments/enabled/
