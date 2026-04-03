@@ -5,7 +5,7 @@ This is my personal blog.
 ## Context
 It is built with Hugo
 ```shell
-brew isntall hugo
+brew install hugo
 ```
 
 ## Blog posts
