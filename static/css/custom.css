@@ -23,12 +23,12 @@
   margin-top: .5rem;
 }
 
-/* On wide screens it becomes a fixed block on the right of the centered column */
 @media screen and (min-width: 1280px) {
   #post-sidebar {
     position: fixed;
     top: 6rem;
-    right: 2rem;
+    left: calc(50% + 25rem);
+    right: auto;
     width: 14rem;
     margin: 0;
     padding-top: 0;
