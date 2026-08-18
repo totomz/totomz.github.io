@@ -1,0 +1,40 @@
+/* Always show header menu links: the burger toggle has been removed */
+@media screen and (max-width: 480px) {
+  #header #nav ul li {
+    display: inline-block;
+  }
+  #header #nav ul li:not(:first-child) {
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
+
+/* Post sidebar: static block at the end of the page on narrow screens */
+#post-sidebar {
+  margin: 2rem 0;
+  padding-top: 1rem;
+  border-top: 1px dotted;
+}
+#post-sidebar p {
+  margin: 0 0 .5rem 0;
+}
+#post-sidebar .hire-me {
+  display: inline-block;
+  margin-top: .5rem;
+}
+
+@media screen and (min-width: 1280px) {
+  #post-sidebar {
+    position: fixed;
+    top: 6rem;
+    left: calc(50% + 25rem);
+    right: auto;
+    width: 14rem;
+    margin: 0;
+    padding-top: 0;
+    border-top: 0;
+    text-align: left;
+    font-size: .8rem;
+    z-index: 100;
+  }
+}

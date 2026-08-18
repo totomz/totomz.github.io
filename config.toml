@@ -7,16 +7,11 @@ theme = "cactus"
 # Cactus Theme # 
 ################
 # Main menu which appears below site header.
-copyright="Tommaso Doninelli - Theme https://github.com/monkeyWzr/hugo-theme-cactus"
+copyright="Tommaso Doninelli - Hugo & [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus)"
 [[menu.main]]
 name = "Home"
 url = "/"
 weight = 1
-
-[[menu.main]]
-name = "All posts"
-url = "/posts"
-weight = 2
 
 [[menu.main]]
 name = "Tags"
@@ -37,6 +32,7 @@ Founder of Hakuna Cloud, working to help companies to adopt the cloud computing 
 15+ experience in IT as Lead Developer, CTO and Cloud Solution Architects
 """
 mainSectionTitle = "Blog"
+css = ["css/custom.css"]
 showAllPostsOnHomePage = true
 
 
