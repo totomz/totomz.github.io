@@ -13,18 +13,8 @@
 <!--        <p>-->
 <!--            How much acceleration are you buy with your tokens? Let's discover it together!-->
 <!--        </p>-->
-        {{/* Obfuscated email: the address never appears as plain text in the markup.
-             It is split on "@" and each half is reversed at build time, then flipped
-             back by CSS (bidi-override); the "@" is injected by CSS content and a decoy
-             span hidden with display:none poisons naive scrapers. */}}
-        {{ $mail := "tommaso@croccocode.com" }}
-        {{ $parts := split $mail "@" }}
-        {{ $user := "" }}{{ range (split (index $parts 0) "") }}{{ $user = printf "%s%s" . $user }}{{ end }}
-        {{ $domain := "" }}{{ range (split (index $parts 1) "") }}{{ $domain = printf "%s%s" . $domain }}{{ end }}
         <p>Get in Touch:</p>
-        <span class="email-obf" role="text">
-            <span class="decoy">no.spam.please</span><span class="rev">{{ $user }}</span><span class="at"></span><span class="rev">{{ $domain }}</span>
-        </span>
+        <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a>
         
         <div class="social-sidebar">
             <a class="no-underline" href="https://github.com/totomz" target="_blank" rel="noopener" aria-label="GitHub">

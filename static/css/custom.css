@@ -1,102 +1,99 @@
 /* Always show header menu links: the burger toggle has been removed */
 @media screen and (max-width: 480px) {
-  #header #nav ul li {
-    display: inline-block;
-  }
-  #header #nav ul li:not(:first-child) {
-    padding-top: 0;
-    padding-left: 0;
-  }
+    #header #nav ul li {
+        display: inline-block;
+    }
+
+    #header #nav ul li:not(:first-child) {
+        padding-top: 0;
+        padding-left: 0;
+    }
 }
 
 /* Full-bleed top bar: body has a max-width, so break out of it with 100vw */
 #top-bar {
-  position: relative;
-  width: 100vw;
-  left: 50%;
-  margin-left: -50vw;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 1rem;
-  background: #b8e6b8;
-  color: #14320f;
-  text-align: center;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1rem;
+    background: #b8e6b8;
+    color: #14320f;
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
 }
+
 #top-bar .marquee {
-  display: inline-flex;
-  animation: top-bar-scroll 30s linear infinite;
+    display: inline-flex;
+    animation: top-bar-scroll 30s linear infinite;
 }
+
 #top-bar .marquee:hover {
-  animation-play-state: paused;
+    animation-play-state: paused;
 }
+
 #top-bar .marquee span {
-  padding-right: 4rem;
+    padding-right: 4rem;
 }
+
 @keyframes top-bar-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
+
 @media (prefers-reduced-motion: reduce) {
-  #top-bar .marquee {
-    animation: none;
-  }
+    #top-bar .marquee {
+        animation: none;
+    }
 }
 
 /* Post sidebar: static block at the end of the page on narrow screens */
 #post-sidebar {
-  margin: 2rem 0;
-  padding-top: 1rem;
-  border-top: 1px dotted;
-}
-#post-sidebar p {
-  margin: 0 0 .5rem 0;
-}
-#post-sidebar .avatar {
-  display: block;
-  width: 8rem;
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-  margin: 0 0 1rem 0;
-}
-#post-sidebar .hire-me {
-  display: inline-block;
-  margin-top: .5rem;
-}
-/* Obfuscated email address. Each .rev chunk is written backwards in the HTML and
-   rendered left-to-right again by the bidi override; the separators come from CSS
-   content (escaped code points) so no scraper sees a full address in the markup. */
-.email-obf {
-  display: inline-block;
-  unicode-bidi: bidi-override;
-  word-break: break-all;
-}
-.email-obf .rev {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-}
-.email-obf .at::before {
-  content: "\0040";
-}
-.email-obf .decoy {
-  display: none;
+    margin: 2rem 0;
+    padding-top: 1rem;
+    border-top: 1px dotted;
 }
 
+#post-sidebar p {
+    margin: 0 0 .5rem 0;
+}
+
+#post-sidebar .avatar {
+    display: block;
+    width: 8rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 0 1rem 0;
+}
+
+#post-sidebar .hire-me {
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+
 #post-sidebar .email-obf {
-  margin-top: .5rem;
-  font-weight: bold;
+    margin-top: .5rem;
+    font-weight: bold;
 }
 
 #post-sidebar .social-sidebar {
-  display: flex;
-  gap: .75rem;
-  margin-top: .75rem;
+    display: flex;
+    gap: .75rem;
+    margin-top: .75rem;
 }
+
 #post-sidebar .social-sidebar a {
-  display: inline-flex;
+    display: inline-flex;
 }
 
 /* Kills the theme's link decoration: cactus draws the underline with a
@@ -106,30 +103,47 @@ a.no-underline,
 a.no-underline:hover,
 .content a.no-underline,
 .content a.no-underline:hover {
-  background: none;
-  background-image: none;
-  text-decoration: none;
-  border-bottom: 0;
-  box-shadow: none;
+    background: none;
+    background-image: none;
+    text-decoration: none;
+    border-bottom: 0;
+    box-shadow: none;
 }
+
 #post-sidebar .social-sidebar svg {
-  width: 22px;
-  height: 22px;
-  flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    flex: 0 0 auto;
 }
 
 @media screen and (min-width: 1280px) {
-  #post-sidebar {
-    position: fixed;
-    top: 6rem;
-    left: calc(50% + 25rem);
-    right: auto;
-    width: 14rem;
-    margin: 0;
-    padding-top: 0;
-    border-top: 0;
-    text-align: left;
-    font-size: .8rem;
-    z-index: 100;
-  }
+    #post-sidebar {
+        position: fixed;
+        top: 6rem;
+        left: calc(50% + 25rem);
+        right: auto;
+        width: 14rem;
+        margin: 0;
+        padding-top: 0;
+        border-top: 0;
+        text-align: left;
+        font-size: .8rem;
+        z-index: 100;
+    }
+}
+
+* :has(> [class$="-allow2copy"]) {
+    position: relative;
+}
+
+[class$="-allow2copy"]::after {
+    content: "[copy]";
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0.5em;
+}
+
+.copied > [class$="-allow2copy"]::after {
+    content: "[copied]";
 }

@@ -28,6 +28,7 @@ mainSectionTitle = "Blog"
 css = ["css/custom.css"]
 showAllPostsOnHomePage = true
 topBarEnabled = true
+contactEmail = "tom@croccocode.com"
 
 [[params.social]]
   name = "github"
