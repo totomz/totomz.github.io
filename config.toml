@@ -8,10 +8,6 @@ theme = "cactus"
 ################
 # Main menu which appears below site header.
 copyright="Tommaso Doninelli - Hugo & [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus)"
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
 
 [[menu.main]]
 name = "Tags"
@@ -26,10 +22,7 @@ weight = 4
 # Home page
 [params]
 description = """
-Welcome to my personal site! I post mainly about tech topics I work on . 
-
-Founder of Hakuna Cloud, working to help companies to adopt the cloud computing by optimizing their infrastructure and cutting cloud services monthly bill.
-15+ experience in IT as Lead Developer, CTO and Cloud Solution Architects
+I write about LLM and Platform Engineering problems I hit in the field. I'm a principal consultant helping teams adopt agentic AI and build the platforms to run it. 
 """
 mainSectionTitle = "Blog"
 css = ["css/custom.css"]
