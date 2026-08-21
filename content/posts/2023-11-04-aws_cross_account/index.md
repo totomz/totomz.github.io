@@ -5,8 +5,7 @@ tags:
     - aws
 ---
 
-# HowTo: AWS IAM cross-account role to write in an S3 bucket in a different Account
-
+HowTo: AWS IAM cross-account role to write in an S3 bucket in a different Account
 Context: the aws Lambda in account `lambda_account` must gain access to an S3 bucket in the `s3_account`.
 
 How does it work?

@@ -14,11 +14,10 @@ author: totomz
 
 ---
 
-> Yes, another blog post about hosting a static website in AWS S3 + CloudFront.
-> This simple post is giving me the opportunity to revamp this blog, update Hugo, and check
-> that the pipeline actually deploy it to a live web page
+Yes, another blog post about hosting a static website in AWS S3 + CloudFront.
+This simple post is giving me the opportunity to revamp this blog, update Hugo, and check
+that the pipeline actually deploy it to a live web page
 
-# What? Really? I can easily host a website on AWS S3?
 Maybe you don't know yet, but [since February 2011, it is possible to host a static website on AWS S3 + CloudFront](https://aws.amazon.com/about-aws/whats-new/2011/02/17/Amazon-S3-Website-Features/) almost for free.
 
 This post shows a simple way to generate all terraform/OpenTofu resources to easily create all the AWS components to quickly have a static website online

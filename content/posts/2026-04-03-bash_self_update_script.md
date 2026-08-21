@@ -10,9 +10,9 @@ author: totomz
 
 ---
 
-# Can I update a shell script while it is running?
+Can I update a shell script while it is running?
 
-## TL;DR
+TL;DR
 It depends on the shell interpreter (bash, zsh, sh) and operating system (linux, bsd, osx).
 
 Generally speaking (Linux/bash) it will **not work**. Bash scripts ARE NOT loaded once in memory, 

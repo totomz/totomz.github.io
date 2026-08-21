@@ -7,10 +7,8 @@ tags:
 
 ---
 
-> This it a TL;DR post to fix a DNS issue with OpenVPN and OPNSense. 
+The vpn client connects but dns resolution is not working
 
-
-# The vpn client connects but dns resolution is not working
 **Symptoms**: 
 * the client connects to the VPN server;
 * you can reach a remote server by ip: `ping 8.8.8.8` succeed

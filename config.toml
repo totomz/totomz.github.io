@@ -27,7 +27,7 @@ I write about LLM and Platform Engineering problems I hit in the field. I'm a pr
 mainSectionTitle = "Blog"
 css = ["css/custom.css"]
 showAllPostsOnHomePage = true
-
+topBarEnabled = true
 
 [[params.social]]
   name = "github"

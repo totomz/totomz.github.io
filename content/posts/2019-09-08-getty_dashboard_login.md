@@ -7,7 +7,7 @@ date: 2019-09-08T21:21:12+01:00
 Recently I wanted to change the default login prompt on the tty1 console on a bare-metal instance to automatically run dockli, a command-line based docker dashboard. 
 <!--more--> 
 
-# About TTY1, getty and agetty
+## About TTY1, getty and agetty
 In the 1830s and 1840s, machines known as teleprinters were developed. These machines could send typed messages 
 “down the wire” to distant locations. The messages were typed by the sender on a keyboard of sorts. 
 They were printed on paper at the receiving end. They were an evolutionary step in telegraphy, which had previously relied on Morse 

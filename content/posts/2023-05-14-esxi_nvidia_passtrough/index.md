@@ -5,7 +5,7 @@ tags:
     - esxi
 ---
 
-# Configure nVidia GTX CUDA with passtrough in VMWare vCenter on Ubuntu 22
+Configure nVidia GTX CUDA with passtrough in VMWare vCenter on Ubuntu 22
 
 ## TL;DR
 Disable nouveau & enable unsuported GPU’s for open source drivers

@@ -1,0 +1,11 @@
+{{ if .Site.Params.topBarEnabled }}
+{{ $text := "Agentic Workflow | DevOps & Platform Engineering | Observability"}}
+<div id="top-bar">
+    {{/* The text is duplicated so the track can loop seamlessly: the animation
+         shifts it by exactly one copy (-50%), where the second copy takes over. */}}
+    <div class="marquee">
+        <span>{{ $text }}</span>
+        <span aria-hidden="true">{{ $text }}</span>
+    </div>
+</div>
+{{ end }}

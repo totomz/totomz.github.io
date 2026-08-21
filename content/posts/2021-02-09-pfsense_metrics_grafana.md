@@ -10,26 +10,26 @@ How to collect usage metrics from pfSense and send them to a Graphite-compatible
 
 This post is specifically for [Grafana Cloud](https://grafana.com/products/cloud/), the m*metrics-as-a-service* platform that gives you a fully managed Grafana dashboard with a Graphite-compatible backend  
 
-# 1. Install the Telegraf package for pfSense
+## 1. Install the Telegraf package for pfSense
 Telegraf is an agent for collecting, processing, aggregating, and writing metrics. 
 
 Telegraf is already packaged for pfSense. Simply  in the meu `System/Packages` and install it. 
 {% include blog/figure.html img="pfsense-telegraf.png" alt="pfSense Telegraf package" caption="Install the Telegraf package for pfSense" %}
 
 
-# 2. Install the carbon-relay-ng package
+## 2. Install the carbon-relay-ng package
 [carbon-relay-ng](https://github.com/grafana/carbon-relay-ng) is a relay for carbon streams, in go. Like carbon-relay from the graphite project, except it supports Grafana Cloud authentication (and many other things....)
 
 Unfortunately, there is no pre-built bianry for the FreeBSD/386 architecture. You can either pull the source code and build it, or use my UNOFFICIAL and USNUPPORTED build [here](https://github.com/totomz/carbon-relay-ng/releases)  
 
-# 3. Configure carbon-relay and Telegraf plugin
+## 3. Configure carbon-relay and Telegraf plugin
 
-## Telegraf plugin
+### Telegraf plugin
 The configuration is straight-forward, just choose `Graphite` as the preferred output, and point Telegraf to the local carbon-relay-ng, by default it will be `localhost:2003`
 
 {% include blog/figure.html img="telegraf-config.png" alt="pfSense Telegraf package configuration" caption="Configure the Telegraf package to use Graphite on localhost:2003" %}
 
-# carbon-realy-ng
+## carbon-realy-ng
 
 The configuration of carbon-relay-ng is straight forward, simply copy-pase the examples on your Grafana Cloud dashboards or uset the following snippets:
 
@@ -99,7 +99,7 @@ graphite_interval = 10000  # in ms
   retentions = 10s:1d
 ```
 
-# Configure rc
+## Configure rc
 This is a baseline configuration for the rc init system. Save it in `/etc/rc.d/carbon-relay-ng`:
 ```
 #!/bin/sh

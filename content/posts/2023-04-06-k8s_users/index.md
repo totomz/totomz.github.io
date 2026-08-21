@@ -6,7 +6,8 @@ tags:
     
 ---
 
-# Kubernetes authentication - RBAC in 3 lines
+Kubernetes authentication - RBAC in 3 lines
+
 Permissions are granted to `Roles` or `ClusterRoles`. A `Roles` always sets permissions within a particular namespace. 
 Authentication is managed by multiple providers; the easiest one is x509 certificates.
 
