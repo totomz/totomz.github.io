@@ -19,8 +19,8 @@
              span hidden with display:none poisons naive scrapers. */}}
         {{ $mail := "tommaso@croccocode.com" }}
         {{ $parts := split $mail "@" }}
-        {{ $user := delimit (collections.Reverse (split (index $parts 0) "")) "" }}
-        {{ $domain := delimit (collections.Reverse (split (index $parts 1) "")) "" }}
+        {{ $user := "" }}{{ range (split (index $parts 0) "") }}{{ $user = printf "%s%s" . $user }}{{ end }}
+        {{ $domain := "" }}{{ range (split (index $parts 1) "") }}{{ $domain = printf "%s%s" . $domain }}{{ end }}
         <p>Get in Touch:</p>
         <span class="email-obf" role="text">
             <span class="decoy">no.spam.please</span><span class="rev">{{ $user }}</span><span class="at"></span><span class="rev">{{ $domain }}</span>
